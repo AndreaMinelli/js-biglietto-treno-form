@@ -14,6 +14,7 @@ const km = document.getElementById('km');
 const age = document.getElementById('age');
 const button = document.getElementById('button');
 const buttonReset = document.getElementById('button-reset');
+const userName = document.getElementById('user-name');
 
 //Variabili fisse
 
@@ -28,6 +29,8 @@ button.addEventListener('click', function () {
     const userKm = parseInt(km.value.trim());
     const userAge = age.value;
     const routPrice = price * userKm;
+
+
 
     finalPrice = routPrice;
 
