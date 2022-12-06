@@ -16,6 +16,17 @@ const button = document.getElementById('button');
 const buttonReset = document.getElementById('button-reset');
 const targetUserName = document.getElementById('user-name');
 
+
+//Targettizzo gli elementi del biglietto
+const ticketName = document.getElementById('ticket-name');
+const offerType = document.getElementById('offer-type');
+const cabNumber = document.getElementById('cab-number');
+const cpCode = document.getElementById('cp-code');
+const ticketPrice = document.getElementById('ticket-price');
+
+
+
+
 //Variabili fisse
 
 const price = 0.21;
@@ -54,6 +65,8 @@ button.addEventListener('click', function () {
         }
 
         const finalPriceDisplayed = finalPrice.toFixed(2);
+
+        ticketName.innerText = userName;
 
         console.log(finalPriceDisplayed + '€');
     };

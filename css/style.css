@@ -32,3 +32,18 @@ body {
 #ticket-data .input-cust:focus-visible {
     outline: none;
 }
+
+#your-ticket .ticket-info:first-of-type {
+    background-color: grey;
+    color: black;
+    flex-basis: 25%;
+}
+
+#your-ticket .col {
+    border-bottom: 1px solid grey;
+}
+
+#your-ticket .ticket-info {
+    height: 150px;
+    flex-basis: 20%;
+}
