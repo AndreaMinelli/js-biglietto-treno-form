@@ -24,8 +24,21 @@ let finalPrice;
 //Eventi logici
 
 button.addEventListener('click', function () {
-    const userKm = km.value;
+    const userKm = parseInt(km.value.trim());
     const userAge = age.value;
+    const routPrice = price * userKm;
 
+    finalPrice = routPrice;
 
+    if (userAge < 18) {
+        const discountPrice = routPrice * minorAgeDiscount;
+        finalPrice = routPrice - discountPrice;
+    } else if (userAge >= 65) {
+        const discountPrice = routPrice * overAgeDiscount;
+        finalPrice = routPrice - discountPrice;
+    }
+
+    const finalPriceDisplayed = finalPrice.toFixed(2)
+
+    console.log(finalPriceDisplayed)
 });
