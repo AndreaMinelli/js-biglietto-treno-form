@@ -38,7 +38,7 @@ button.addEventListener('click', function () {
         finalPrice = routPrice - discountPrice;
     }
 
-    const finalPriceDisplayed = finalPrice.toFixed(2)
+    const finalPriceDisplayed = finalPrice.toFixed(2);
 
-    console.log(finalPriceDisplayed)
+    console.log(finalPriceDisplayed + '€');
 });
