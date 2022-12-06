@@ -1,0 +1,27 @@
+/* Utils */
+
+:root {
+    --violet: rgb(185, 20, 80)
+}
+
+/* General */
+body {
+    background-color: var(--violet);
+}
+
+.section-header {
+    color: white;
+    text-align: center;
+}
+
+.row {
+    background-color: white;
+}
+
+#ticket-data label {
+    color: var(--violet);
+}
+
+#ticket-data input {
+    border: 1px solid var(--violet);
+}
