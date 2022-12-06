@@ -87,4 +87,9 @@ buttonReset.addEventListener('click', function () {
     targetUserName.value = '';
     km.value = '';
     age.value = 'adult';
+    offerType.innerText = '';
+    ticketName.innerText = '';
+    cabNumber.innerText = '';
+    cpCode.innerText = '';
+    ticketPrice.innerText = '';
 });
