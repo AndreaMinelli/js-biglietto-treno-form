@@ -55,20 +55,30 @@ button.addEventListener('click', function () {
 
     if (valid) {
         finalPrice = routPrice;
+        offerType.innerText = 'Biglietto Standard'
+        ticketName.innerText = userName;
 
         if (userAge === 'minor') {
             const discountPrice = routPrice * minorAgeDiscount;
             finalPrice = routPrice - discountPrice;
+            offerType.innerText = 'Sconto Minorenni'
         } else if (userAge === 'over') {
             const discountPrice = routPrice * overAgeDiscount;
             finalPrice = routPrice - discountPrice;
+            offerType.innerText = 'Sconto Over 65'
         }
 
         const finalPriceDisplayed = finalPrice.toFixed(2);
 
-        ticketName.innerText = userName;
+        //Calcolo numero carrozza
+        const randomCab = Math.floor(Math.random() * 8) + 1;
+        cabNumber.innerText = randomCab;
 
-        console.log(finalPriceDisplayed + '€');
+        //Calcolo Codice CP
+        const randomCp = Math.floor(Math.random() * (100000 - 10000) + 10000);
+        cpCode.innerText = randomCp;
+
+        ticketPrice.innerText = finalPriceDisplayed + '€';
     };
 });
 
