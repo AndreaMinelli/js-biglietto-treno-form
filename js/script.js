@@ -10,8 +10,22 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 
 //Targhettizzo gli elementi nella pagina
 
-const userKm = document.getElementById('km');
-const userAge = document.getElementById('age');
+const km = document.getElementById('km');
+const age = document.getElementById('age');
 const button = document.getElementById('button');
 
-console.log(userKm, userAge, button)
+//Variabili fisse
+
+const price = 0.21;
+const minorAgeDiscount = 0.20;
+const overAgeDiscount = 0.40;
+let finalPrice;
+
+//Eventi logici
+
+button.addEventListener('click', function () {
+    const userKm = km.value;
+    const userAge = age.value;
+
+
+});
