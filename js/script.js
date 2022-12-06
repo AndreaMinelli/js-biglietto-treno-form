@@ -25,6 +25,7 @@ let finalPrice;
 
 //Eventi logici
 
+//Button calcolo prezzo e eventuali sconti
 button.addEventListener('click', function () {
     const userKm = parseInt(km.value.trim());
     const userAge = age.value;
@@ -58,6 +59,7 @@ button.addEventListener('click', function () {
     };
 });
 
+//Button reset dei campi
 buttonReset.addEventListener('click', function () {
     targetUserName.value = '';
     km.value = '';
