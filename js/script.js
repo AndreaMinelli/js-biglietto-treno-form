@@ -13,6 +13,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 const km = document.getElementById('km');
 const age = document.getElementById('age');
 const button = document.getElementById('button');
+const buttonReset = document.getElementById('button-reset');
 
 //Variabili fisse
 
