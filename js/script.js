@@ -14,7 +14,7 @@ const km = document.getElementById('km');
 const age = document.getElementById('age');
 const button = document.getElementById('button');
 const buttonReset = document.getElementById('button-reset');
-const userName = document.getElementById('user-name');
+const targetUserName = document.getElementById('user-name');
 
 //Variabili fisse
 
@@ -28,27 +28,38 @@ let finalPrice;
 button.addEventListener('click', function () {
     const userKm = parseInt(km.value.trim());
     const userAge = age.value;
+    const userName = targetUserName.value.trim();
     const routPrice = price * userKm;
 
+    let valid = true;
 
+    if (!isNaN(userName) || !(userName)) {
+        valid = false;
+        alert('Hai inserito credenziali non valide, prego inserire Nome e Cognome.');
+    } else if (isNaN(userKm) || userKm <= 0) {
+        valid = false;
+        alert('Hai inserito km non validi, prego reinserire dati.');
+    };
 
-    finalPrice = routPrice;
+    if (valid) {
+        finalPrice = routPrice;
 
-    if (userAge === 'minor') {
-        const discountPrice = routPrice * minorAgeDiscount;
-        finalPrice = routPrice - discountPrice;
-    } else if (userAge === 'over') {
-        const discountPrice = routPrice * overAgeDiscount;
-        finalPrice = routPrice - discountPrice;
-    }
+        if (userAge === 'minor') {
+            const discountPrice = routPrice * minorAgeDiscount;
+            finalPrice = routPrice - discountPrice;
+        } else if (userAge === 'over') {
+            const discountPrice = routPrice * overAgeDiscount;
+            finalPrice = routPrice - discountPrice;
+        }
 
-    const finalPriceDisplayed = finalPrice.toFixed(2);
+        const finalPriceDisplayed = finalPrice.toFixed(2);
 
-    console.log(finalPriceDisplayed + '€');
+        console.log(finalPriceDisplayed + '€');
+    };
 });
 
 buttonReset.addEventListener('click', function () {
-    userName.value = '';
+    targetUserName.value = '';
     km.value = '';
     age.value = 'adult';
 });
