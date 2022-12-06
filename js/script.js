@@ -46,3 +46,9 @@ button.addEventListener('click', function () {
 
     console.log(finalPriceDisplayed + '€');
 });
+
+buttonReset.addEventListener('click', function () {
+    userName.value = '';
+    km.value = '';
+    age.value = 'adult';
+});
