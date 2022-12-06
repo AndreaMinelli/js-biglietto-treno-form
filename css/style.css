@@ -29,6 +29,6 @@ body {
     font-weight: 500;
 }
 
-#ticket-data input:focus-visible {
+#ticket-data .input-cust:focus-visible {
     outline: none;
 }

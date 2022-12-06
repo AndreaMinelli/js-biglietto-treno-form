@@ -31,10 +31,10 @@ button.addEventListener('click', function () {
 
     finalPrice = routPrice;
 
-    if (userAge < 18) {
+    if (userAge === 'minor') {
         const discountPrice = routPrice * minorAgeDiscount;
         finalPrice = routPrice - discountPrice;
-    } else if (userAge >= 65) {
+    } else if (userAge === 'over') {
         const discountPrice = routPrice * overAgeDiscount;
         finalPrice = routPrice - discountPrice;
     }
