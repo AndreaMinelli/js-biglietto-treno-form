@@ -7,3 +7,11 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 - va applicato uno sconto del 20% per i minorenni
 - va applicato uno sconto del 40% per gli over 65.
 */
+
+//Targhettizzo gli elementi nella pagina
+
+const userKm = document.getElementById('km');
+const userAge = document.getElementById('age');
+const button = document.getElementById('button');
+
+console.log(userKm, userAge, button)
